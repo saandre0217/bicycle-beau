@@ -6,6 +6,7 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --hover-shadow: 1px 2px 3px #0D3A64;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -14,18 +15,34 @@
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
   }
-}
+} 
 
-body {
+body { 
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
+  background: #F4F1EE
+  /* linear-gradient(
       to bottom,
       transparent,
       rgb(var(--background-end-rgb))
     )
-    rgb(var(--background-start-rgb));
+    rgb(var(--background-start-rgb)); */
 }
 
+button {
+  color:#C5F4F8;
+  background-color:#0D3A64;
+  padding: .5rem;
+  border-radius: 1rem;
+  font-weight: 200;
+}
+
+button:hover {
+  color:#0D3A64;
+  background-color: #C5F4F8; 
+  padding: .5rem;
+  border-radius: 1rem;
+  box-shadow: var(--hover-shadow)
+}
 @layer utilities {
   .text-balance {
     text-wrap: balance;
